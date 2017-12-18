@@ -1,4 +1,4 @@
-package com.gaohanna.oasis.vo;
+package com.gaohanna.oasis.common.vo;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.gaohanna.oasis.entity;
+package com.gaohanna.oasis.common.entity;
 
 import java.io.Serializable;
 import java.util.LinkedList;

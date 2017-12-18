@@ -1,6 +1,6 @@
 package com.gaohanna.oasis.testES;
 
-import com.gaohanna.oasis.manager.ElasticSearchClientManager;
+import com.gaohanna.oasis.core.manager.ElasticSearchClientManager;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.RestHighLevelClient;

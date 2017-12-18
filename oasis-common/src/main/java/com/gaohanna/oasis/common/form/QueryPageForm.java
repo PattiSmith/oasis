@@ -1,4 +1,4 @@
-package com.gaohanna.oasis.form;
+package com.gaohanna.oasis.common.form;
 
 import lombok.Data;
 

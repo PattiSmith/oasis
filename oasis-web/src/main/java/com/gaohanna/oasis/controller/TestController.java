@@ -1,11 +1,11 @@
 package com.gaohanna.oasis.controller;
 
-import com.gaohanna.oasis.ao.IElasticSearchAO;
-import com.gaohanna.oasis.entity.BizResult;
-import com.gaohanna.oasis.entity.PageResult;
-import com.gaohanna.oasis.form.QueryPageForm;
-import com.gaohanna.oasis.manager.ElasticSearchClientManager;
-import com.gaohanna.oasis.vo.TmsWorkbenchVO;
+import com.gaohanna.oasis.core.ao.IElasticSearchAO;
+import com.gaohanna.oasis.common.entity.BizResult;
+import com.gaohanna.oasis.common.entity.PageResult;
+import com.gaohanna.oasis.common.form.QueryPageForm;
+import com.gaohanna.oasis.core.manager.ElasticSearchClientManager;
+import com.gaohanna.oasis.common.vo.TmsWorkbenchVO;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RestHighLevelClient;
