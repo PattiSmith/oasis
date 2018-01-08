@@ -14,8 +14,7 @@ import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ import java.util.List;
  * @author keben
  * @date 2017/12/12
  */
-@Controller
+@RestController
 public class TestController {
 
     @Autowired
@@ -35,7 +34,7 @@ public class TestController {
     @Autowired
     private IElasticSearchAO elasticSearchAO;
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     @ResponseBody
     public List<String> test() throws IOException {
         RestHighLevelClient client = elasticSearchClientManager.getClient();
@@ -57,15 +56,15 @@ public class TestController {
         return resultList;
     }
 
-    @RequestMapping("/queryList.json")
+    @RequestMapping(value = "/queryList.json", method = RequestMethod.POST)
     @ResponseBody
-    public BizResult<PageResult<TmsWorkbenchVO>> queryList(){
-        QueryPageForm form = new QueryPageForm();
+    public BizResult<PageResult<TmsWorkbenchVO>> queryList(@RequestBody QueryPageForm form){
+        /*QueryPageForm form = new QueryPageForm();
         form.setPageNo(1);
         form.setPageSize(20);
         form.setIndexName("db_b2b");
         form.setDocType("tms_workbench");
-        form.setTagType(2);
+        form.setTagType(3);*/
         return elasticSearchAO.queryList(form);
     }
 }
