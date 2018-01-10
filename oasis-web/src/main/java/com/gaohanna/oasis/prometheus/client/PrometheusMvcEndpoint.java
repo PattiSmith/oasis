@@ -3,6 +3,7 @@ package com.gaohanna.oasis.prometheus.client;
 import io.prometheus.client.exporter.common.TextFormat;
 import org.springframework.boot.actuate.endpoint.Endpoint;
 import org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,7 @@ import java.util.Set;
  * @author keben
  * @date 2018/1/9
  */
+@ConfigurationProperties("endpoints.prometheus")
 public class PrometheusMvcEndpoint extends EndpointMvcAdapter {
 
     private final PrometheusEndpoint delegate;

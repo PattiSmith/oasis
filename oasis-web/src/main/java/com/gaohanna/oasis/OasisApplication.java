@@ -52,9 +52,9 @@ public class OasisApplication {
         //ApiInfo apiInfo = new ApiInfo("基础框架", "这是一个项目的基础框架结构，构建新项目可以在这个基础上搭建","1.0","apiDocs","keben@maihaoche.com","","");
         ApiInfo apiInfo = new ApiInfoBuilder()
                 .title("接口文档")
-                .description("hummer项目接口文档")
+                .description("oasis项目接口文档")
                 .version("1.0")
-                .contact(new Contact("keben", "keben@maihaoche.com", "keben@maihaoche.com"))
+                .contact(new Contact("Gloria", "https://swagger.io/", "pyuyun@foxmail.com"))
                 .build();
         return apiInfo;
     }

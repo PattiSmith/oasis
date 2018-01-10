@@ -34,7 +34,7 @@ public class TestController {
     @Autowired
     private IElasticSearchAO elasticSearchAO;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/query.json", method = RequestMethod.GET)
     @ResponseBody
     public List<String> test() throws IOException {
         RestHighLevelClient client = elasticSearchClientManager.getClient();
